@@ -1,0 +1,219 @@
+/* Dark Theme CSS for Minimalist Web Design */
+/* ========================================================= */
+/* Updated to provide a visually appealing, modern, and accessible dark mode. */
+
+/* CSS Variables for easy customization of colors, spacing, and styling */
+:root {
+    /* Dark mode color palette */
+    --primary-color: #bb86fc;
+    /* Accent color for interactive elements */
+    --accent-color: #3700b3;
+    /* Darker variant for hover/focus states */
+    --background-color: #121212;
+    /* Main page background */
+    --secondary-color: #1e1e1e;
+    /* Container and card backgrounds */
+    --text-color: #e0e0e0;
+    /* Primary text color for readability */
+    --input-border-color: #333333;
+    /* Input border color */
+    --input-focus-color: #6200ee;
+    /* Input focus border color */
+    --spacing: 20px;
+    --border-radius: 8px;
+}
+
+/* Global reset for consistent box sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling for a dark, uncluttered layout */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: var(--spacing);
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Central container to group content with a subtle elevated look */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing);
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    /* Subtle shadow for depth in dark mode */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Header styles with centered text for a clean look */
+header {
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+
+.main-heading {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Spacing for each section to maintain a minimalist layout */
+section {
+    margin-bottom: var(--spacing);
+}
+
+/* Link styling with smooth hover transition for clarity */
+.info-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-section a:hover {
+    color: var(--accent-color);
+}
+
+/* Button group layout using flex for a neat, responsive design */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: var(--spacing);
+}
+
+/* Button styles with dark mode adjustments */
+button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    /* Dark text on accent background for contrast */
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Input fields with matching dark backgrounds and focus effects */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--input-focus-color);
+    box-shadow: 0 0 0 3px rgba(98, 0, 238, 0.2);
+}
+
+/* Output area styled to stand out while matching the dark theme */
+#output {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    border: 1px solid var(--input-border-color);
+    min-height: 50px;
+}
+
+/* Highlight effect for feedback with subtle animation */
+.highlight {
+    background-color: #333333;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    animation: highlight-fade 1s ease-in-out;
+}
+
+/* List styling for items with a clean, card-like appearance */
+#item-list {
+    list-style: none;
+    padding: 0;
+}
+
+#item-list li {
+    background-color: var(--secondary-color);
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--input-border-color);
+    animation: slide-in 0.3s ease-out;
+}
+
+/* Dynamic section styling for italicized text with accent color */
+.dynamic-section i {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    color: var(--primary-color);
+    font-style: italic;
+    animation: fade-in 0.5s ease-out;
+}
+
+/* Keyframe animations for subtle visual feedback */
+@keyframes highlight-fade {
+    0% {
+        background-color: #444444;
+    }
+
+    100% {
+        background-color: #333333;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments for smaller screens to maintain usability */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

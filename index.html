@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Challenge</title>
+    <!-- Responsive meta tag for proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Central container for consistent layout and spacing -->
+    <div class="container">
+        <header>
+            <h1 class="main-heading">DOM Manipulation Challenge</h1>
+        </header>
+        <main>
+            <section class="info-section">
+                <h2>Section Title 1</h2>
+                <h2>Section Title 2</h2>
+                <p class="cls">This is a paragraph with class "cls".</p>
+                <p class="cls">Another paragraph with class "cls".</p>
+                <!-- Added target and rel attributes for better UX and security -->
+                <a href="https://example.com" id="main-link" target="_blank" rel="noopener noreferrer">Visit Example</a>
+            </section>
+
+            <section class="interactive-section">
+                <h3>Interactive DOM Manipulation</h3>
+                <!-- Grouping buttons together for a cleaner layout -->
+                <div class="button-group">
+                    <button id="count-h2">Count h2 Elements</button>
+                    <button id="change-h1">Change Main Heading</button>
+                    <button id="toggle-class">Toggle Highlight</button>
+                    <button id="change-input">Change Input to Password</button>
+                    <button id="add-list-item">Add List Item</button>
+                    <button id="remove-list-item">Remove Last List Item</button>
+                    <button id="add-italic">Add Italic Text</button>
+                </div>
+                <input type="text" id="user-input" placeholder="Enter text here">
+                <ul id="item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+                <div id="output"></div>
+            </section>
+
+            <section class="dynamic-section">
+                <!-- New elements (italic text) will be appended here -->
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
